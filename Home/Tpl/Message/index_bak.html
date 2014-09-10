@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>兴拓财富后台管理系统</title>
+	<!-- 头文件 -->
+	<include file="Public:header" />
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			
+			<!-- 导航文件 -->
+			<include file="Public:menu" />
+
+			<!-- 右侧主体 -->
+			<div id="primary_right">
+				<div class="inner">
+		
+					<div class="sortable">
+					
+						<!-- 问题列表 -->
+						<volist name="list" id="vo" key="i">
+							
+							<if condition="($i % 4 eq  0) ">
+								<assign name="last" value="last" />
+							<else />
+								<assign name="last" value="" />	
+							</if>
+							
+							<div class="one_fourth column {$last} ">
+							  <div class="portlet dialog_link">
+								<div class="portlet-header">
+									{$vo.is_reply}
+								</div>
+								<div class="portlet-content" style="display: block;">
+								  <p>{$vo.content}</p>
+								</div>
+							  </div>
+							</div>	
+							
+						</volist>
+						
+					</div><!-- sortable -->
+
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+			
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+	
+	<div id="dialog" title="待回答">  
+		<h2>Hello! This is a modal window!</h2>
+		<p>
+			<tear
+		</p>
+	</div> 
+</body>
+</html>

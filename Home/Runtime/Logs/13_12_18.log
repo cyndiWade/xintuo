@@ -1,0 +1,1322 @@
+[ 2013-12-18T23:51:21+08:00 ] 192.168.1.100 /xingtuo/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001636s ]
+NOTIC: [8] Undefined index: user_info E:\wamp\www\xingtuo\Home\Lib\Action\HtmlBaseAction.class.php 第 44 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014018s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014163s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000855s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000855s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000686s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000930s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003646s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001014s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001132s ]
+
+[ 2013-12-18T23:51:29+08:00 ] 192.168.1.100 /xingtuo/?s=/Login/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001056s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001173s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+NOTIC: [8] Undefined index: user_info E:\wamp\www\xingtuo\Home\Lib\Action\HtmlBaseAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `xt_users` [ RunTime:0.048157s ]
+SQL: SELECT * FROM `xt_users` WHERE ( `account` = 'admin' ) AND ( `type` = 0 ) AND ( `status` = 0 ) LIMIT 1   [ RunTime:0.008784s ]
+SQL: UPDATE `xt_users` SET `id`=1,`account`='admin',`name`='管理',`password`='e10adc3949ba59abbe56e057f20f883e',`last_login_time`=1387381889,`last_login_ip`='192.168.1.100',`login_count`=154,`create_time`=1376561926,`update_time`=1376561926,`type`=0,`status`=0 WHERE ( `id` = 1 ) [ RunTime:0.013224s ]
+
+[ 2013-12-18T23:51:30+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/System/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001350s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001499s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001238s ]
+SQL: SHOW COLUMNS FROM `xt_users` [ RunTime:0.004856s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xt_users` WHERE ( `status` = 0 ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `xt_question` [ RunTime:0.016449s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xt_question` WHERE ( `status` = 0 ) AND ( `is_reply` = 1 ) LIMIT 1   [ RunTime:0.000473s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024205s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000713s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000686s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000539s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002956s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000809s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000912s ]
+
+[ 2013-12-18T23:51:34+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Message/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000946s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001060s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+SQL: SHOW COLUMNS FROM `xt_question` [ RunTime:0.003916s ]
+SQL: SELECT `id`,`user_id`,`content`,`time`,`is_reply` FROM `xt_question` WHERE ( `status` = 0 ) ORDER BY id DESC  [ RunTime:0.000373s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031749s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031880s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000774s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000649s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000527s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000723s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002946s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000868s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000960s ]
+
+[ 2013-12-18T23:51:35+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Product/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000895s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001013s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000938s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.095886s ]
+SQL: SELECT `id`,`name`,`content`,`create_time` FROM `xt_product` WHERE ( `status` = 0 )  [ RunTime:0.018909s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.034624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034830s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001176s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001112s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000954s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005100s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001573s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001741s ]
+
+[ 2013-12-18T23:51:37+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Message/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001458s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001648s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001328s ]
+SQL: SHOW COLUMNS FROM `xt_question` [ RunTime:0.004089s ]
+SQL: SELECT `id`,`user_id`,`content`,`time`,`is_reply` FROM `xt_question` WHERE ( `status` = 0 ) ORDER BY id DESC  [ RunTime:0.000416s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014135s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000705s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000637s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000544s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000747s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002909s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000794s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000888s ]
+
+[ 2013-12-18T23:51:38+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Product/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000869s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000984s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.004039s ]
+SQL: SELECT `id`,`name`,`content`,`create_time` FROM `xt_product` WHERE ( `status` = 0 )  [ RunTime:0.000253s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014660s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014783s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000666s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000611s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000509s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000736s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002776s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000947s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001047s ]
+
+[ 2013-12-18T23:51:40+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/News/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000966s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001090s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM `xt_news` [ RunTime:0.010991s ]
+SQL: SELECT `id`,`name`,`create_time` FROM `xt_news` WHERE ( `status` = 0 )  [ RunTime:0.000549s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.068424s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068595s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001278s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001108s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000953s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005114s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001415s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001584s ]
+
+[ 2013-12-18T23:51:41+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001253s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001420s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.041214s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xt_advertisement`
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000572s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 ) 
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024381s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001182s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001116s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000943s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005035s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000803s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000939s ]
+
+[ 2013-12-18T23:51:43+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/News/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000896s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001013s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+SQL: SHOW COLUMNS FROM `xt_news` [ RunTime:0.004228s ]
+SQL: SELECT `id`,`name`,`create_time` FROM `xt_news` WHERE ( `status` = 0 )  [ RunTime:0.000275s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012869s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012981s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000659s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000610s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000543s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000705s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002785s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000774s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000863s ]
+
+[ 2013-12-18T23:51:44+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001241s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001401s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003348s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xt_advertisement`
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000348s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 ) 
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013104s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000699s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000618s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000520s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002829s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000756s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2013-12-18T23:51:45+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/News/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001173s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001326s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+SQL: SHOW COLUMNS FROM `xt_news` [ RunTime:0.003983s ]
+SQL: SELECT `id`,`name`,`create_time` FROM `xt_news` WHERE ( `status` = 0 )  [ RunTime:0.000228s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013238s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000665s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000608s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000503s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000730s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002781s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000786s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000876s ]
+
+[ 2013-12-18T23:51:49+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Product/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000870s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001063s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.004050s ]
+SQL: SELECT `id`,`name`,`content`,`create_time` FROM `xt_product` WHERE ( `status` = 0 )  [ RunTime:0.000266s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014016s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000652s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000609s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000523s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000693s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002740s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000738s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2013-12-18T23:51:50+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Message/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001549s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001727s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001321s ]
+SQL: SHOW COLUMNS FROM `xt_question` [ RunTime:0.003856s ]
+SQL: SELECT `id`,`user_id`,`content`,`time`,`is_reply` FROM `xt_question` WHERE ( `status` = 0 ) ORDER BY id DESC  [ RunTime:0.000497s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013643s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013795s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000871s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000615s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000520s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000719s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002999s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000766s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000859s ]
+
+[ 2013-12-18T23:51:52+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/User/user_list/type/2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000871s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001002s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `xt_users` [ RunTime:0.004701s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT u.id,u.account,u.name,f.file_address,u.last_login_time,u.last_login_ip,u.login_count,u.type,i.age,i.sex,i.identity,i.email,i.province,i.city,i.street,i.interest,i.purchase,i.remarks FROM xt_users AS u LEFT JOIN xt_user_info AS i ON u.id = i.user_id LEFT JOIN xt_file AS f ON f.id = i.file_id WHERE ( u.type = '2' ) AND ( u.status = 0 )  [ RunTime:0.023175s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.034260s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034381s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000684s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000614s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000526s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000754s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002835s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000744s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2013-12-18T23:51:54+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Director/relation/id/7
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000914s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001035s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM `xt_users` [ RunTime:0.004695s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `id` FROM `xt_users` WHERE ( `status` = 0 ) AND ( `id` = 7 ) AND ( `type` = 2 ) LIMIT 1   [ RunTime:0.000612s ]
+SQL: SELECT u.id,u.account,u.name,f.file_address,u.last_login_time,u.last_login_ip,u.login_count,u.type,i.age,i.sex,i.identity,i.email,i.province,i.city,i.street,i.interest,i.purchase,i.remarks FROM xt_users AS u LEFT JOIN xt_user_info AS i ON u.id = i.user_id LEFT JOIN xt_file AS f ON f.id = i.file_id WHERE ( u.status = 0 ) AND ( u.type = 1 ) AND ( i.director_id = '7' )  [ RunTime:0.000415s ]
+NOTIC: [4096] Argument 1 passed to BaseAction::public_file_dir() must be an array, null given, called in E:\wamp\www\xingtuo\Home\Lib\Action\DirectorAction.class.php on line 31 and defined E:\wamp\www\xingtuo\Home\Lib\Action\BaseAction.class.php 第 23 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\xingtuo\Home\Lib\Action\BaseAction.class.php 第 32 行.
+SQL: SELECT u.id,u.account,u.name,f.file_address,u.last_login_time,u.last_login_ip,u.login_count,u.type,i.age,i.sex,i.identity,i.email,i.province,i.city,i.street,i.interest,i.purchase,i.remarks FROM xt_users AS u LEFT JOIN xt_user_info AS i ON u.id = i.user_id LEFT JOIN xt_file AS f ON f.id = i.file_id WHERE ( u.status = 0 ) AND ( u.type = 1 ) AND ( i.director_id = 0 )  [ RunTime:0.000715s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024791s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000672s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000612s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000509s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000730s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002792s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000786s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2013-12-18T23:52:07+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/News/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000906s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001024s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `xt_news` [ RunTime:0.004099s ]
+SQL: SELECT `id`,`name`,`create_time` FROM `xt_news` WHERE ( `status` = 0 )  [ RunTime:0.000268s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012762s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012870s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000683s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000616s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000700s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002821s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000785s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000879s ]
+
+[ 2013-12-18T23:52:47+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/User/user_list/type/2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000856s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000972s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `xt_users` [ RunTime:0.004241s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT u.id,u.account,u.name,f.file_address,u.last_login_time,u.last_login_ip,u.login_count,u.type,i.age,i.sex,i.identity,i.email,i.province,i.city,i.street,i.interest,i.purchase,i.remarks FROM xt_users AS u LEFT JOIN xt_user_info AS i ON u.id = i.user_id LEFT JOIN xt_file AS f ON f.id = i.file_id WHERE ( u.type = '2' ) AND ( u.status = 0 )  [ RunTime:0.000464s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015498s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000643s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000590s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000505s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002679s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000734s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2013-12-18T23:52:48+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Message/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001441s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001679s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001318s ]
+SQL: SHOW COLUMNS FROM `xt_question` [ RunTime:0.005732s ]
+SQL: SELECT `id`,`user_id`,`content`,`time`,`is_reply` FROM `xt_question` WHERE ( `status` = 0 ) ORDER BY id DESC  [ RunTime:0.000578s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019418s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019596s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000998s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000892s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000504s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000896s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003599s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000816s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000909s ]
+
+[ 2013-12-18T23:52:49+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Product/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001437s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001621s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001324s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.005342s ]
+SQL: SELECT `id`,`name`,`content`,`create_time` FROM `xt_product` WHERE ( `status` = 0 )  [ RunTime:0.000243s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013463s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000638s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000583s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000503s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000681s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002654s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000752s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000847s ]
+
+[ 2013-12-18T23:52:52+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Message/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001349s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001521s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001251s ]
+SQL: SHOW COLUMNS FROM `xt_question` [ RunTime:0.005508s ]
+SQL: SELECT `id`,`user_id`,`content`,`time`,`is_reply` FROM `xt_question` WHERE ( `status` = 0 ) ORDER BY id DESC  [ RunTime:0.000378s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013727s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000655s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000606s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000520s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000772s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002816s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000770s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000863s ]
+
+[ 2013-12-18T23:53:07+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/User/user_list/type/2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000885s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+SQL: SHOW COLUMNS FROM `xt_users` [ RunTime:0.004326s ]
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT u.id,u.account,u.name,f.file_address,u.last_login_time,u.last_login_ip,u.login_count,u.type,i.age,i.sex,i.identity,i.email,i.province,i.city,i.street,i.interest,i.purchase,i.remarks FROM xt_users AS u LEFT JOIN xt_user_info AS i ON u.id = i.user_id LEFT JOIN xt_file AS f ON f.id = i.file_id WHERE ( u.type = '2' ) AND ( u.status = 0 )  [ RunTime:0.000456s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015592s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015714s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000696s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000599s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000510s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000715s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002779s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000739s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000829s ]
+
+[ 2013-12-18T23:53:12+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Message/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000886s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001002s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `xt_question` [ RunTime:0.004176s ]
+SQL: SELECT `id`,`user_id`,`content`,`time`,`is_reply` FROM `xt_question` WHERE ( `status` = 0 ) ORDER BY id DESC  [ RunTime:0.000439s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013744s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000686s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000607s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000523s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002790s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000758s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000850s ]
+
+[ 2013-12-18T23:54:19+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Message/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000960s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001077s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+SQL: SHOW COLUMNS FROM `xt_question` [ RunTime:0.003953s ]
+SQL: SELECT `id`,`user_id`,`content`,`time`,`is_reply` FROM `xt_question` WHERE ( `status` = 0 ) ORDER BY id DESC  [ RunTime:0.000379s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013703s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013830s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000666s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000619s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000503s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002750s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000750s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000840s ]
+
+[ 2013-12-18T23:54:22+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Message/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001444s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001629s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001455s ]
+SQL: SHOW COLUMNS FROM `xt_question` [ RunTime:0.005154s ]
+SQL: SELECT `id`,`user_id`,`content`,`time`,`is_reply` FROM `xt_question` WHERE ( `status` = 0 ) ORDER BY id DESC  [ RunTime:0.000374s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013670s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000663s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000585s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000502s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000684s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002689s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000822s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000912s ]
+
+[ 2013-12-18T23:54:23+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Product/index/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001427s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001609s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001324s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.003896s ]
+SQL: SELECT `id`,`name`,`content`,`create_time` FROM `xt_product` WHERE ( `status` = 0 )  [ RunTime:0.000231s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013322s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013434s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000632s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000584s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000508s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000679s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002654s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000749s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2013-12-18T23:54:25+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Product/edit/act/edit/id/4
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001450s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001629s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001159s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001307s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.003913s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `id`,`name`,`content`,`create_time` FROM `xt_product` WHERE ( `status` = 0 ) AND ( `id` = 4 ) LIMIT 1   [ RunTime:0.000261s ]
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\xingtuo\Home\Lib\Model\BaseModel.class.php 第 66 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026064s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026188s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000679s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000612s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000532s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000740s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002848s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000917s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001014s ]
+
+[ 2013-12-18T23:54:27+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/News/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000903s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+SQL: SHOW COLUMNS FROM `xt_news` [ RunTime:0.004115s ]
+SQL: SELECT `id`,`name`,`create_time` FROM `xt_news` WHERE ( `status` = 0 )  [ RunTime:0.000300s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013771s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000656s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000596s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000603s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000725s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002838s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000851s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000948s ]
+
+[ 2013-12-18T23:54:29+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000892s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001005s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003323s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xt_advertisement`
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000353s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 ) 
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013085s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000666s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000634s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000523s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000705s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002791s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000750s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2013-12-18T23:54:31+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000924s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001050s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003643s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xt_advertisement`
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000323s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 ) 
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013427s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013548s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000663s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000592s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000545s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002766s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000794s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000890s ]
+
+[ 2013-12-18T23:54:32+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/News/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001122s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001268s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001046s ]
+SQL: SHOW COLUMNS FROM `xt_news` [ RunTime:0.004581s ]
+SQL: SELECT `id`,`name`,`create_time` FROM `xt_news` WHERE ( `status` = 0 )  [ RunTime:0.000251s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013215s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000663s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000606s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000527s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000703s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002760s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000794s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000886s ]
+
+[ 2013-12-18T23:54:33+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000896s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001014s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003300s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xt_advertisement`
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000309s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 ) 
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013627s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000651s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000609s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000520s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000689s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002731s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000749s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000847s ]
+
+[ 2013-12-18T23:54:35+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001430s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001611s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001325s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003406s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xt_advertisement`
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000312s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 ) 
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013010s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000655s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000602s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000503s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000685s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002711s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000746s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2013-12-18T23:54:37+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001438s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001636s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001233s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001386s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.004594s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xt_advertisement`
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000423s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 ) 
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018512s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018670s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000862s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000809s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000691s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000935s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003650s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001021s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001152s ]
+
+[ 2013-12-18T23:54:40+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/edit/act/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001367s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001543s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003318s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xt_advertisement`
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.003779s ]
+SQL: SHOW COLUMNS FROM `xt_file` [ RunTime:0.006872s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `id`,`name`,`content`,`create_time` FROM `xt_product` WHERE ( `status` = 0 )  [ RunTime:0.000445s ]
+NOTIC: [8] Undefined variable: news_info E:\wamp\www\xingtuo\Home\Lib\Action\AdvertisementAction.class.php 第 88 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.030280s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030484s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001065s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000982s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000835s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004491s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001239s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001394s ]
+
+[ 2013-12-18T23:54:45+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/edit/act/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001358s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001533s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001336s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003337s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xt_advertisement`
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.004071s ]
+SQL: SHOW COLUMNS FROM `xt_file` [ RunTime:0.003742s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: INSERT INTO `xt_file` (`file_address`,`type`) VALUES ('20131218/52b1c5453c33e.jpg',3) [ RunTime:0.000343s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given E:\wamp\www\ThinkPHP\ThinkPHP3.1.3\Lib\Core\Model.class.php 第 821 行.
+SQL: INSERT INTO `xt_advertisement` (`file_id`,`time`) VALUES (5,1387382085) [ RunTime:0.000305s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : INSERT INTO `xt_advertisement` (`file_id`,`time`) VALUES (5,1387382085)
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008057s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000621s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000591s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000505s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000693s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002656s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000738s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2013-12-18T23:55:30+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/edit/act/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000965s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001094s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003437s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `xt_advertisement`
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.003928s ]
+SQL: SHOW COLUMNS FROM `xt_file` [ RunTime:0.003620s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: INSERT INTO `xt_file` (`file_address`,`type`) VALUES ('20131218/52b1c572bcb16.jpg',3) [ RunTime:0.000361s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given E:\wamp\www\ThinkPHP\ThinkPHP3.1.3\Lib\Core\Model.class.php 第 821 行.
+SQL: INSERT INTO `xt_advertisement` (`file_id`,`time`) VALUES (6,1387382130) [ RunTime:0.000277s ]
+ERR: 1146:Table 'xingtuo.xt_advertisement' doesn't exist
+ [ SQL语句 ] : INSERT INTO `xt_advertisement` (`file_id`,`time`) VALUES (6,1387382130)
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007631s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007743s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000608s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000594s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000523s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000696s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002661s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000742s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2013-12-18T23:57:50+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/edit/act/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000973s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001082s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003763s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.004364s ]
+SQL: SHOW COLUMNS FROM `xt_file` [ RunTime:0.003769s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: SELECT `id`,`name`,`content`,`create_time` FROM `xt_product` WHERE ( `status` = 0 )  [ RunTime:0.000289s ]
+NOTIC: [8] Undefined variable: news_info E:\wamp\www\xingtuo\Home\Lib\Action\AdvertisementAction.class.php 第 88 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012019s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000637s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000643s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000529s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000708s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002786s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000741s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2013-12-18T23:57:53+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/edit/act/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001218s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001365s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001105s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003869s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.004132s ]
+SQL: SHOW COLUMNS FROM `xt_file` [ RunTime:0.003693s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: INSERT INTO `xt_file` (`file_address`,`type`) VALUES ('20131218/52b1c601710f7.jpg',3) [ RunTime:0.000350s ]
+SQL: INSERT INTO `xt_advertisement` (`product_id`,`file_id`,`time`) VALUES (6,11,1387382273) [ RunTime:0.000243s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008442s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008567s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000645s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000633s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000525s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000717s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002766s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000783s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2013-12-18T23:57:54+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001462s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001634s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001408s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003974s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000346s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013156s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000627s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000607s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000519s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000677s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002682s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000736s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000821s ]
+
+[ 2013-12-18T23:57:56+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001045s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001165s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.016969s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000437s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014534s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014664s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000739s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000631s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000526s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000782s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002945s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000814s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000905s ]
+
+[ 2013-12-18T23:57:57+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000892s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003904s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000315s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013818s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000648s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000611s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000504s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002686s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001037s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001133s ]
+
+[ 2013-12-18T23:57:57+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000930s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001043s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.004446s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000347s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013909s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000527s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000521s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000475s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003078s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000758s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000856s ]
+
+[ 2013-12-18T23:57:57+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000926s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001039s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003848s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000337s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013622s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000638s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000617s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000517s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002748s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000743s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2013-12-18T23:57:57+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000925s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.004295s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000355s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014004s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000642s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000620s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000499s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000695s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002691s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000762s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000847s ]
+
+[ 2013-12-18T23:57:58+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000999s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001121s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003823s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000378s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014158s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000672s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000656s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000513s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002802s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000751s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2013-12-18T23:57:58+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000898s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.004127s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000401s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013564s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013680s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000645s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000622s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000501s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000688s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002699s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000747s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2013-12-18T23:57:59+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000956s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001069s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003946s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000326s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014082s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000630s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000618s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000628s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000717s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002839s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000788s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000879s ]
+
+[ 2013-12-18T23:57:59+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001371s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001496s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003873s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000318s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014104s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000690s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000659s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000526s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002830s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000756s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000851s ]
+
+[ 2013-12-18T23:58:00+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000945s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001060s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003721s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000304s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014018s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014150s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000654s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000633s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000518s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000714s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002771s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000785s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000875s ]
+
+[ 2013-12-18T23:58:00+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001338s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001491s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.004054s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000359s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013504s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013618s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000591s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000548s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000436s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000633s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002451s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000738s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2013-12-18T23:58:04+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/edit/act/delete/id/6
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000773s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000894s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003928s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.003760s ]
+SQL: SHOW COLUMNS FROM `xt_file` [ RunTime:0.003753s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: UPDATE `xt_advertisement` SET `status`=-2 WHERE ( `id` = 6 ) [ RunTime:0.000226s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007670s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007775s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000536s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000560s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000475s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000724s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002583s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000683s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000774s ]
+
+[ 2013-12-18T23:59:07+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000697s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003788s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000344s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013189s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013302s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000588s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000578s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000449s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000650s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002511s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000709s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000803s ]
+
+[ 2013-12-18T23:59:14+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/edit/act/delete/id/4
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000729s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000839s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003786s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.003619s ]
+SQL: SHOW COLUMNS FROM `xt_file` [ RunTime:0.003646s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: UPDATE `xt_advertisement` SET `status`=-2 WHERE ( `id` = 4 ) [ RunTime:0.000251s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007637s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000956s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000613s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000463s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000652s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002954s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000702s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000797s ]
+
+[ 2013-12-18T23:59:30+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/edit/act/delete/id/6
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000963s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001088s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.004098s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.004111s ]
+SQL: SHOW COLUMNS FROM `xt_file` [ RunTime:0.003788s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: UPDATE `xt_advertisement` SET `status`=-2 WHERE ( `id` = 6 ) [ RunTime:0.000259s ]
+
+[ 2013-12-18T23:59:51+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/edit/act/delete/id/6
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000735s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003901s ]
+SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.003843s ]
+SQL: SHOW COLUMNS FROM `xt_file` [ RunTime:0.003576s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+SQL: UPDATE `xt_advertisement` SET `status`=-2 WHERE ( `id` = 6 ) [ RunTime:0.000223s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007689s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007798s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000531s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000716s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000507s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000668s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002791s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000713s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000809s ]
+
+[ 2013-12-18T23:59:56+08:00 ] 192.168.1.100 /xingtuo/index.php?s=/Advertisement/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000717s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `xt_advertisement` [ RunTime:0.003925s ]
+SQL: SELECT p.id,f.file_address,p.name,a.time FROM xt_advertisement AS a LEFT JOIN xt_product AS p ON a.product_id = p.id LEFT JOIN xt_file AS f ON a.file_id = f.id WHERE ( a.status = 0 )  [ RunTime:0.000326s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013647s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013797s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000599s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000617s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000469s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000652s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002595s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000707s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000802s ]
+

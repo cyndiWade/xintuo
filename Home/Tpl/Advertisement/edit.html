@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>兴拓财富后台管理系统</title>
+	<!-- 头文件 -->
+	<include file="Public:header" />
+	<style type="text/css">
+
+.cleditorMain {
+	height: 250px;
+    width: 800px;
+    background-color: #FBFBFB;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 0 #999999;
+    margin-bottom: 15px;
+    margin-left: 2px;
+    padding: 0 1px 1px;
+}
+
+	</style>
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			
+			<!-- 导航文件 -->
+			<include file="Public:menu" />
+			
+			<!-- 右侧主体 -->
+			<div id="primary_right">
+				<div class="inner">
+		
+				<form action="" method="post" enctype="multipart/form-data">
+
+					<fieldset>
+						<legend>编辑新闻</legend>
+
+						<p>
+							<label>理财产品:</label>
+							<select name="product_id" class="dropdown">	
+								<option value="" >请选择一个理财产品</option>
+								<volist name="prodect_list" id="vo">
+									<option value="{$vo.id}">{$vo.name}</option>
+								</volist>
+							</select>
+							<span class="validate_success">*必选</span>
+						</p>
+						
+						<p>
+							<label>上传图片:</label>
+							<input class="sf" type="file" name="img_file" />
+							<span class="validate_success">*必选(1136x640  或 960x640 的图片)</span>
+						</p>
+						
+						
+						<p><input class="button" type="submit" value="确认" /></p>
+					</fieldset>
+				</form>
+					<div class="clearboth"></div>
+
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+			
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+</body>
+</html>

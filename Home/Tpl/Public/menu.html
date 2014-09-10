@@ -1,0 +1,89 @@
+			<!-- 左侧导航 -->
+			<div id="primary_left">
+        
+				<div id="logo">
+					<a href="index.html" title="Dashboard"><img src="{$Think.const.APP_PATH}Public/assets/logo.png" alt="" /></a>
+				</div> <!-- logo end -->
+
+				<div id="menu"> <!-- navigation menu -->
+				
+				<!-- class="current"-->
+					<ul class="all_menu">
+						
+						<li  data-menu_name="系统">
+							<a href="?s=/System/index" >
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/small_icons_3/dashboard.png" alt=""/>
+								<span class="current">系统</span>
+							</a>
+						</li>
+						
+						<li  data-menu_name="用户管理">
+							<a href="?s=/User/user_list/">
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/small_icons_3/coin.png" alt=""/>
+								<span>用户管理</span>
+							</a>
+							<ul class="dashboard">
+								<li><a href="?s=/User/user_add/type/user">添加用户</a></li>
+							</ul>
+						</li>
+
+						<li data-menu_name="客户经理">
+							<a href="?s=/User/user_list/type/2">
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/small_icons_3/users.png" alt=""/>
+								<span>客户经理</span>
+							</a>
+							<ul class="dashboard">
+								<li><a href="?s=/User/user_add/type/director">添加经理</a></li>
+							</ul>
+						</li>
+						
+						<li data-menu_name="客户提问">
+							<a href="?s=/Message/index/">
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/small_icons_3/posts.png" alt="" />
+								<span>用户提问</span>
+							</a>
+						</li>
+						
+						<li  data-menu_name="理财产品">
+							<a href="?s=/Product/index/">
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/small_icons_3/notes.png" alt="" />
+								<span>理财产品</span>
+							</a>
+							<ul class="dashboard">
+								<li><a href="?s=/Product/edit/act/add/">添加理财产品</a></li>
+							</ul>
+						</li>
+						
+						<li  data-menu_name="新闻资讯">
+							<a href="?s=/News/index">
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/small_icons_3/media.png" alt="" />
+								<span>新闻资讯</span>
+							</a>
+							<ul class="dashboard">
+								<li><a href="?s=/News/edit/act/add">添加新闻</a></li>
+							</ul>
+						</li>
+						
+						<li  data-menu_name="广告相关">
+							<a href="?s=/Advertisement/index">
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/dashboard/18.png" alt="" />
+								<span>广告相关</span>
+							</a>
+							<ul class="dashboard">
+								<li><a href="?s=/Advertisement/edit/act/add">添加广告</a></li>
+							</ul>
+						</li>
+
+						
+
+						<li  data-menu_name="推送消息">
+							<a href="?s=/Send/index">
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/small_icons_3/settings.png" alt="" />
+								<span>推送消息</span>
+							</a>
+						</li>
+
+
+					</ul>
+				</div> <!-- navigation menu end -->
+			</div> <!-- sidebar end -->

@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>兴拓财富后台管理系统</title>
+	<!-- 头文件 -->
+	<include file="Public:header" />
+	
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			
+			<!-- 导航文件 -->
+			<include file="Public:menu" />
+			
+			<!-- 右侧主体 -->
+			<div id="primary_right">
+				<div class="inner">
+			
+					<table class="normal tablesorter fullwidth">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>新闻名称</th>
+								<th>创建时间</th>
+								<th>编辑操作</th>
+							</tr>
+						</thead>
+			
+						<tbody>
+							<volist name="news_list" id="vo" key="i">
+								
+								<if condition="($i % 2 eq  0) ">
+									<assign name="odd" value="class=odd" />
+								<else />
+									<assign name="odd" value="" />	
+								</if>
+							
+							<tr {$odd}>
+								<td>{$i}</td>
+								<td>{$vo.name}</td>
+								<td>{$vo.create_time}</td>
+								<td>
+									<a href="?s=/News/edit/act/edit/id/{$vo.id}" title="编辑" class="tooltip table_icon"><img src="{$Think.const.APP_PATH}Public/assets/icons/actions_small/Pencil.png" alt="" /></a> 
+									<a href="?s=/News/edit/act/delete/id/{$vo.id}" title="删除" class="tooltip table_icon delete"><img src="{$Think.const.APP_PATH}Public/assets/icons/actions_small/Trash.png" alt="" /></a>
+								</td>
+							</tr>
+							</volist>
+						</tbody>
+					</table>
+		
+					<hr />
+
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+			
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+</body>
+</html>

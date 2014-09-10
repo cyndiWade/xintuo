@@ -1,0 +1,1 @@
+ALTER TABLE  `xt_user_info` ADD  `identity` CHAR( 20 ) NULL COMMENT  '身份证件' AFTER  `sex`

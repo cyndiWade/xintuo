@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>兴拓财富后台管理系统</title>
+	<!-- 头文件 -->
+	<include file="Public:header" />
+	<style type="text/css">
+
+.cleditorMain {
+	height: 250px;
+    width: 800px;
+    background-color: #FBFBFB;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 0 #999999;
+    margin-bottom: 15px;
+    margin-left: 2px;
+    padding: 0 1px 1px;
+}
+
+	</style>
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			
+			<!-- 导航文件 -->
+			<include file="Public:menu" />
+			
+			<!-- 右侧主体 -->
+			<div id="primary_right">
+				<div class="inner">
+		
+				<form action="" method="post">
+
+					<fieldset>
+						<legend>回复消息</legend>
+
+						<p><label>编辑信息内容</label></p>
+						<textarea class="cleditorMain" name="content">{$content}</textarea>
+						<div class="clearboth"></div>
+						
+						<p><input class="button" type="submit" value="确认回复" /></p>
+					</fieldset>
+				</form>
+					<div class="clearboth"></div>
+
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+			
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+</body>
+</html>

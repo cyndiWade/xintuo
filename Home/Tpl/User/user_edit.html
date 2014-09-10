@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>兴拓财富后台管理系统</title>
+	<!-- 头文件 -->
+	<include file="Public:header" />
+	<style type="text/css">
+		.dropdown {
+			width:200px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			
+			<!-- 导航文件 -->
+			<include file="Public:menu" />
+			
+			<!-- 右侧主体 -->
+			<div id="primary_right">
+				<div class="inner">
+			
+				<form action="" method="post">
+
+					<fieldset>
+						<legend>编辑用户信息</legend>
+						
+						<p>
+							<label>账号:</label>
+							<input class="sf" type="text" disabled="disabled" value="{$user_info.account}" />
+							<span class="field_desc"></span>
+						</p>
+						
+						<p>
+							<label>身份:</label>
+							<input class="sf" type="text" disabled="disabled" value="{$user_info.type}" />
+							<span class="field_desc"></span>
+						</p>
+						
+						<p>
+							<label>密码:</label>
+							<input class="sf" type="password" name="password_one"  />
+							<span class="validate_success">不填写则不修改</span>
+						</p>
+						<p>
+							<label>确认密码:</label>
+							<input class="sf" type="password" name="password_two"  />
+							<span class="field_desc"></span>
+						</p>
+						
+						<p>
+								<label>姓名:</label>
+								<input class="sf" type="text" name="name" value="{$user_info.name}" />
+								<span class="validate_success"></span>
+							</p>
+							
+							<p>
+								<label>身份证:</label>
+								<input class="sf" type="text" name="identity"  value="{$user_info.identity}"/>
+								<span class="validate_success"></span>
+							</p>
+					
+
+						<p>
+							<label>年龄:</label>
+							<select name="age" class="dropdown">	
+							
+								<for start="1" end="101">
+									<if condition="($i  eq  $user_info['age']) ">
+										<option value="{$i}" selected=selected>{$i}</option>
+									<else />
+										<option value="{$i}" >{$i}</option>
+									</if>
+								</for>
+								
+							</select>
+						</p>
+
+						<p>
+							<label>性别:</label>
+							
+							<if condition="($user_info['sex'] eq  '男')">
+								<assign name="checked1" value="checked=checked" />
+							<elseif condition="($user_info['sex'] eq  '女')" />
+								<assign name="checked2" value="checked=checked" />	
+							</if>
+							
+							<input type="radio" name="sex" value="男" {$checked1}/>男
+							<input type="radio" name="sex" value="女" {$checked2}/>女
+						</p>
+						
+						<p>
+							<label>电子邮箱:</label>
+							<input class="sf" name="email" type="text" value="{$user_info.email}" /> 
+							<span class="validate_error"></span>
+						</p>
+						
+						<p>
+							<label>省份:</label>
+							<input class="sf" name="province" type="text" value="{$user_info.province}" /> 
+							<span class="validate_error"></span>
+						</p>
+						
+						<p>
+							<label>城市:</label>
+							<input class="sf" name="city" type="text" value="{$user_info.city}" /> 
+							<span class="validate_error"></span>
+						</p>
+							
+						<p>
+							<label>街道地址:</label>
+							<input class="sf" name="street" type="text" value="{$user_info.street}" /> 
+							<span class="validate_error"></span>
+						</p>
+						
+						<p>
+							<label>感兴趣的产品:</label>
+							<input class="sf" name="interest" type="text" value="{$user_info.interest}" /> 
+							<span class="validate_error"></span>
+						</p>
+						
+						<p>
+							<label>已购买的产品:</label>
+							<input class="sf" name="purchase" type="text" value="{$user_info.purchase}" /> 
+							<span class="validate_error"></span>
+						</p>
+						
+						<p><label>备注信息:</label></p>
+						<textarea class="editor" name="remarks">{$user_info.remarks}</textarea>
+						
+						<div class="clearboth"></div>
+						
+						<p><input class="button" type="submit" value="确认提交" />
+						 <input class="button" type="reset" value="重填" /></p>
+					</fieldset>
+				</form>
+					<div class="clearboth"></div>
+
+
+
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+			
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+</body>
+</html>

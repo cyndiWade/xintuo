@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>兴拓财富后台管理系统</title>
+	<!-- 头文件 -->
+	<include file="Public:header" />
+	
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			
+			<!-- 导航文件 -->
+			<include file="Public:menu" />
+			
+			<!-- 右侧主体 -->
+			<div id="primary_right">
+				<div class="inner">
+					
+					<form action="?s=/User/user_list" method="POST" name="aaa">
+					<fieldset>
+						<legend>查询用户</legend>
+						
+						<p>
+							账号：
+							<input  type="text"  name="account" value="" class="small"/>
+							姓名：
+							<input  type="text"  name="name" value="" class="small"/>
+							身份证：
+							<input  type="text"  name="identity" value="" class="small"/>
+							<input type="radio"  name="sex" value="男" checked="checked" >
+							男
+							<input type="radio" name="sex" value="女" >
+							女 
+							
+						</p>
+						<p>
+							身份：
+							<select class="dropdown" name="type">
+								<option value="1">用户</option>
+								<option value="2">客户经理</option>
+								<option value="0">管理员</option>										
+							</select>
+						</p>
+
+						<div class="clearboth"></div>
+						
+						<p>
+							<input class="button" type="submit" value="搜索" /> 
+							<input class="button" type="reset" value="重填" />
+						</p>
+					</fieldset>
+					</form>
+				
+				
+					<p ><label>{$header}</label></p>
+					
+					<table class="normal tablesorter fullwidth">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>头像</th>
+								<th>账号</th>
+								<th>姓名</th>
+								<th>身份</th>
+								<th>年龄</th>
+								<th>性别</th>
+								<!-- 
+								<th>省份</th>
+								<th>城市</th>
+								<th>街道地址</th>
+								<th>感兴趣的产品</th>
+								<th>已购买的产品</th>
+								-->
+								<th>编辑操作</th>
+							</tr>
+						</thead>
+			
+						<tbody>
+							<volist name="list" id="vo" key="i">
+								
+								<if condition="($i % 2 eq  0) ">
+									<assign name="odd" value="class=odd" />
+								<else />
+									<assign name="odd" value="" />	
+								</if>
+							
+							<tr {$odd}>
+								<td>{$i}</td>
+								<td>
+									<if condition="($vo.file_address neq NULL)">
+										<img src="{$vo.file_address}" alt="" style="width:60px;height:60px;"/>
+									<else />
+										<img src="{$Think.const.APP_PATH}Public/assets/avatar.png" alt="" />
+									</if>	
+								</td>
+								<td>{$vo.account}</td>
+								<td>{$vo.name}</td>
+								<td>{$vo.type}</td>
+								<td>{$vo.age}</td>
+								<td>{$vo.sex}</td>
+								
+								<!-- 
+								<td>{$vo.province}</td>
+								<td>{$vo.city}</td>
+								<td>{$vo.street}</td>
+								<td>{$vo.interest}</td>
+								<td>{$vo.purchase}</td>
+								-->
+								<td>
+									<a href="?s=/User/user_edit/id/{$vo.id}" title="编辑查看" class="tooltip table_icon"><img src="{$Think.const.APP_PATH}Public/assets/icons/actions_small/Pencil.png" alt="" /></a> 
+									<a href="?s=/User/user_del/id/{$vo.id}" title="删除账号" class="tooltip table_icon delete"><img src="{$Think.const.APP_PATH}Public/assets/icons/actions_small/Trash.png" alt="" /></a>
+
+									<if condition="($vo.type eq '客户经理')">
+										<!-- 
+										<a href="?s=/Director/relation/id/{$vo.id}" title="管理客户"  class="tooltip table_icon"><img alt="" src="{$Think.const.APP_PATH}Public/assets/icons/actions_small/Preferences.png"></a>
+										-->
+										<a href="?s=/DirectorUser/director_user/id/{$vo.id}" title="管理客户"  class="tooltip table_icon"><img alt="" src="{$Think.const.APP_PATH}Public/assets/icons/actions_small/Preferences.png"></a>
+									</if>			
+								</td>
+							</tr>
+							</volist>
+						</tbody>
+					</table>
+		
+					<hr />
+
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+			
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+</body>
+</html>

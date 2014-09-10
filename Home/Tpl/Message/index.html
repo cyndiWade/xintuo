@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>兴拓财富后台管理系统</title>
+	<!-- 头文件 -->
+	<include file="Public:header" />
+	
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			
+			<!-- 导航文件 -->
+			<include file="Public:menu" />
+			
+			<!-- 右侧主体 -->
+			<div id="primary_right">
+				<div class="inner">
+					
+					<form action="?s=/Message/index/" method="POST" name="aaa">
+					<fieldset>
+						<legend>搜索</legend>
+						<p>
+							<input type="radio"  name="is_reply" value="1" >
+							待回复
+							<input type="radio" name="is_reply" value="0" >
+							已回复 
+						</p>
+						<div class="clearboth"></div>	
+						<p>
+							<input class="button" type="submit" value="搜索" /> 
+							<input class="button" type="reset" value="重填" />
+						</p>
+					</fieldset>
+					</form>
+				
+					<table class="normal tablesorter fullwidth">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>提问内容</th>
+								<th>提问时间</th>
+								<th>回复状态</th>
+								<th>编辑操作</th>
+							</tr>
+						</thead>
+			
+						<tbody>
+							<volist name="list" id="vo" key="i">
+								
+							<if condition="($i % 2 eq  0) ">
+									<assign name="odd" value="class=odd" />
+								<else />
+									<assign name="odd" value="" />	
+								</if>
+							
+							<tr {$odd}>
+								<td>{$i}</td>
+								<td>{$vo.content}</td>
+								<td>{$vo.time}</td>
+								<td>{$vo.is_reply}</td>			
+								<td>
+									<a href="?s=/Message/receive_question/qid/{$vo.id}/user_id/{$vo.user_id}" title="编辑回复" class="tooltip table_icon"><img src="{$Think.const.APP_PATH}Public/assets/icons/actions_small/Pencil.png" alt="" /></a> 
+									<a href="?s=/Message/question_del/qid/{$vo.id}" title="删除" class="tooltip table_icon delete"><img src="{$Think.const.APP_PATH}Public/assets/icons/actions_small/Trash.png" alt="" /></a>
+								</td>
+							</tr>
+							</volist>
+						</tbody>
+					</table>
+		
+					<hr />
+
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+			
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+</body>
+</html>

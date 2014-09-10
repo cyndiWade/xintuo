@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>兴拓财富后台管理系统</title>
+	<!-- 头文件 -->
+	<include file="Public:header" />
+	
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			
+			<!-- 导航文件 -->
+			<include file="Public:menu" />
+			
+			<!-- 右侧主体 -->
+			<div id="primary_right">
+				<div class="inner">
+
+					<form action="" method="post">
+						<fieldset>
+							<legend>{$header}</legend>
+							
+							<p>
+								<label>账号:</label>
+								<input class="sf" type="text" name="account"  />
+								<span class="validate_success">*必填</span>
+							</p>
+							
+							<p>
+								<label>密码:</label>
+								<input class="sf" type="password" name="password_one"  />
+								<span class="validate_success">*必填</span>
+							</p>
+							<p>
+								<label>确认密码:</label>
+								<input class="sf" type="password" name="password_two"  />
+								<span class="validate_success">*必填</span>
+							</p>
+						
+							<p>
+								<label>姓名:</label>
+								<input class="sf" type="text" name="name"  />
+								<span class="validate_success"></span>
+							</p>
+							
+							<p>
+								<label>身份证:</label>
+								<input class="sf" type="text" name="identity"  />
+								<span class="validate_success"></span>
+							</p>
+	
+							<p>
+								<label>年龄:</label>
+								<select name="age" class="dropdown">	
+								
+									<for start="1" end="101">
+										<option value="{$i}" >{$i}</option>
+									</if>
+									</for>
+									
+								</select>
+							</p>
+	
+							<p>
+								<label>性别:</label>
+								<input type="radio" name="sex" value="男" checked="checked"/>男
+								<input type="radio" name="sex" value="女" />女
+							</p>
+							
+							<p>
+								<label>电子邮箱:</label>
+								<input class="sf" name="email" type="text"  /> 
+								<span class="validate_error"></span>
+							</p>
+							
+							<p>
+								<label>省份:</label>
+								<input class="sf" name="province" type="text"  /> 
+								<span class="validate_error"></span>
+							</p>
+							
+							<p>
+								<label>城市:</label>
+								<input class="sf" name="city" type="text" /> 
+								<span class="validate_error"></span>
+							</p>
+								
+							<p>
+								<label>街道地址:</label>
+								<input class="sf" name="street" type="text" /> 
+								<span class="validate_error"></span>
+							</p>
+							
+							<p>
+								<label>感兴趣的产品:</label>
+								<input class="sf" name="interest" type="text" /> 
+								<span class="validate_error"></span>
+							</p>
+							
+							<p>
+								<label>已购买的产品:</label>
+								<input class="sf" name="purchase" type="text" /> 
+								<span class="validate_error"></span>
+							</p>
+							
+							<p><label>备注信息:</label></p>
+							<textarea class="editor" name="remarks"></textarea>
+							
+							<div class="clearboth"></div>
+							
+							<p><input class="button" type="submit" value="确认提交" />
+							 <input class="button" type="reset" value="重填" /></p>
+						</fieldset>
+					</form>
+					<div class="clearboth"></div>
+
+
+
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+			
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+</body>
+</html>

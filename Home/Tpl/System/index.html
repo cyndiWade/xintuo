@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>兴拓财富后台管理系统</title>
+	<!-- 头文件 -->
+	<include file="Public:header" />
+	
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			
+			<!-- 导航文件 -->
+			<include file="Public:menu" />
+			
+			<!-- 右侧主体 -->
+			<div id="primary_right">
+				<div class="inner">
+				
+					<div class="notification info"> 
+						<span></span> 
+						<div class="text"> 
+							<p><strong>系统</strong>
+							欢迎您：管理员
+							</p> 
+						</div> 
+					</div> 
+					
+					<ul class="dash all_menu">
+						
+						<li class="fade_hover tooltip" title="系统" data-menu_name="系统">
+							<a href="?s=/System/index">
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/dashboard/21.png" alt="" />
+								<span>系统</span>
+							</a>
+						</li>
+				
+						<li class="fade_hover tooltip" title="共{$num}个用户" data-menu_name="用户管理">
+							<span class="bubble">{$num}</span>
+							<a href="?s=/User/user_list">
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/dashboard/54.png" alt="" />
+								<span>用户管理</span>
+							</a>
+						</li>
+						
+						<!--
+						<li class="fade_hover tooltip" title="推送消息" data-menu_name="推送消息">
+							<a href="?s=/Send/index">
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/dashboard/42.png" alt="" />
+								<span>推送系统消息</span>
+							</a>
+						</li>
+						 -->
+						 
+						 <li class="fade_hover tooltip" title="{$question_num} 条待回复提问!" data-menu_name="用户提问">
+							<span class="bubble">{$question_num}</span>
+							<a href="?s=/Message/index/">
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/dashboard/75.png" alt="" />
+								<span>待回复</span>
+							</a>
+						</li>
+						
+						<li class="fade_hover tooltip" title="退出系统">
+							<a href="?s=/Login/logout" >
+								<img src="{$Think.const.APP_PATH}Public/assets/icons/dashboard/118.png" alt="" />
+								<span>退出系统</span>
+							</a>
+						</li>
+
+					</ul> <!-- end dashboard items -->
+					<hr />
+
+
+
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+			
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+</body>
+</html>

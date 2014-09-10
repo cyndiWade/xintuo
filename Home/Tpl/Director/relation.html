@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>兴拓财富后台管理系统</title>
+	<!-- 头文件 -->
+	<include file="Public:header" />
+	<style type="text/css">
+		.users {
+			margin: 0 10px 0 0;
+			float:left;
+			width:130px;
+		}
+		
+		#Director {
+			width:1000px;
+			min-height:125px;
+			overflow :auto;
+			overflow:hidden;
+			margin-bottom:15px;
+			background:#E0F8E6;
+			padding:8px;
+		}
+		
+		#User {
+			width:1000px;
+			min-height:125px;
+			overflow :auto;
+			background:#CEF6F5;
+			padding:8px;
+			overflow:hidden;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			
+			<!-- 导航文件 -->
+			<include file="Public:menu" />
+
+			<!-- 右侧主体 -->
+			<div id="primary_right">
+				<div class="inner">
+					
+					<!--  已被管理的客户列表 -->
+					<div class="notification secure"> 
+						<span></span> 
+						<div class="text"> 
+							<p><strong>已被管理客户区域</strong></p> 
+						</div>        
+					</div> 	
+					<div id="Director">
+						<volist name="list_one" id="vo">
+						<div class="users" data-user_id="{$vo.id}">
+							<div class="portlet">
+								<div class="portlet-header">{$vo.account}</div>
+								<div class="portlet-content" style="display: block;">
+									<if condition="($vo.file_address neq NULL)">
+										<img src="{$vo.file_address}" alt="" style="width:60px;height:60px;"/>
+									<else />
+										<img src="{$Think.const.APP_PATH}Public/assets/avatar.png" alt="" />
+									</if>	
+									<p>{$vo.sex} {$vo.age}</p>
+								</div>
+							</div>
+						</div>
+						</volist>	
+					</div>
+					
+					<!--  待分配客户列表 -->
+					<div class="notification tip"> 
+						<span></span> 
+						 <div class="text"> 
+							<p><strong>待分配客户区域</strong></p> 
+						</div> 
+					</div> 		
+					<div id="User">		
+						<volist name="list_two" id="vo">
+					 	<div class="users" data-user_id="{$vo.id}">
+							<div class="portlet">
+								<div class="portlet-header">{$vo.account}</div>
+								<div class="portlet-content" style="display: block;">
+									<if condition="($vo.file_address neq NULL)">
+										<img src="{$vo.file_address}" alt="" style="width:60px;height:60px;"/>
+									<else />
+										<img src="{$Think.const.APP_PATH}Public/assets/avatar.png" alt="" />
+									</if>	
+									<p>{$vo.sex} {$vo.age}</p>
+								</div>
+							</div>
+						</div>
+						</volist>		
+					</div>
+
+
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+			
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+<input type="hidden" id="director_id" value="{$id}" />
+</body>
+</html>
